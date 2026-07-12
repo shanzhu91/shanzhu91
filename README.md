@@ -1,16 +1,44 @@
-## Hi there 👋
+# 👋 你好，我是沈凡卓
 
-<!--
-**shanzhu91/shanzhu91** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+南京审计大学金审学院 · 信息管理与信息系统 · 2027届
 
-Here are some ideas to get you started:
+**求职意向**：数据分析实习生
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+
+## 🛠️ 技能
+
+- **数据分析**：Excel（精通）、SQL、Python（Pandas）、PowerBI
+- **AI工具**：GPT、Cursor
+- **产品**：PRD撰写、竞品分析、Axure原型
+- **设计**：Photoshop、短视频拍摄剪辑
+
+
+## 📁 项目
+
+### 电商品类结构优化研究
+- 基于Olist平台11万+订单数据，完成帕累托分析和ABC分类
+- 发现前5品类仅占40%，长尾品类占36%+
+- 提出头部聚焦、长尾淘汰、交叉推荐三项策略
+
+### 赛博锦鲤——抽签小程序
+- 独立完成需求分析→PRD→UI设计→MVP开发测试
+- 设计云数据库埋点采集用户行为数据
+- 基于数据分析用户活跃高峰，提出产品迭代建议
+
+### 小红书POI数据采集与Top10推荐
+- 爬取小红书POI数据，构建加权评分模型
+- 输出南京女性友好酒吧Top10推荐榜单
+
+
+## 📜 证书
+
+- 英语CET-4
+- WPS二级
+- Adobe Photoshop平面设计证书
+- 数字媒体交互设计X证书
+
+
+## 📬 联系方式
+
+- 邮箱：2075046994@qq.com
+- 电话：15051721937
