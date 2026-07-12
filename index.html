@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>沈凡卓 · 作品集</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #FFFBF5;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #2D2D2D;
+            line-height: 1.6;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+        }
+
+        /* 顶部横幅 - 暖阳渐变 */
+        .hero {
+            background: linear-gradient(135deg, #FF8C42 0%, #FFD93D 40%, #FF6B8A 100%);
+            border-radius: 24px;
+            padding: 48px 40px 40px 40px;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(255, 140, 66, 0.25);
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .hero .sub {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-top: 8px;
+        }
+
+        .hero .tagline {
+            margin-top: 14px;
+            font-size: 15px;
+            opacity: 0.9;
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            padding: 6px 24px;
+            border-radius: 40px;
+            backdrop-filter: blur(4px);
+        }
+
+        /* 卡片通用 */
+        .card {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 28px 32px;
+            margin-top: 24px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(255, 140, 66, 0.10);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #FF8C42;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h2::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, #FF8C42, #FFD93D, #FF6B8A);
+            border-radius: 4px;
+        }
+
+        /* 技能标签 */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 14px;
+            margin-top: 6px;
+        }
+
+        .skills span {
+            background: #FFF5ED;
+            color: #FF8C42;
+            padding: 4px 16px 4px 12px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid rgba(255, 140, 66, 0.15);
+        }
+
+        .skills span::before {
+            content: "●";
+            color: #FF8C42;
+            margin-right: 6px;
+            font-size: 10px;
+        }
+
+        /* 项目卡片 */
+        .project-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-top: 4px;
+        }
+
+        .project-item {
+            padding: 18px 20px;
+            background: #FFFAF5;
+            border-radius: 16px;
+            border-left: 4px solid #FF8C42;
+            transition: 0.2s;
+        }
+
+        .project-item:hover {
+            background: #FFF5ED;
+            border-left-color: #FF6B8A;
+        }
+
+        .project-item h3 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #1F1F1F;
+        }
+
+        .project-item .meta {
+            font-size: 13px;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        .project-item .desc {
+            font-size: 14px;
+            color: #444;
+            margin-top: 6px;
+        }
+
+        .project-item .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .project-item .tags span {
+            background: #FFEDE0;
+            color: #B85A1A;
+            font-size: 11px;
+            padding: 2px 12px;
+            border-radius: 40px;
+            font-weight: 500;
+        }
+
+        .project-item .btn-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #FF8C42;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1px solid #FF8C42;
+            padding: 4px 18px;
+            border-radius: 40px;
+            transition: 0.2s;
+        }
+
+        .project-item .btn-link:hover {
+            background: #FF8C42;
+            color: #fff;
+        }
+
+        /* 社交链接行 */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 28px;
+            margin-top: 6px;
+        }
+
+        .social-links a {
+            color: #444;
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 2px solid transparent;
+            transition: 0.15s;
+        }
+
+        .social-links a:hover {
+            color: #FF8C42;
+            border-bottom-color: #FF8C42;
+        }
+
+        /* 底部 */
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: #aaa;
+            margin-top: 32px;
+            padding-bottom: 12px;
+        }
+
+        /* 响应式微调 */
+        @media (max-width: 600px) {
+            .hero { padding: 32px 20px; }
+            .hero h1 { font-size: 26px; }
+            .card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- 顶部 -->
+    <div class="hero">
+        <h1>☀️ 沈凡卓</h1>
+        <div class="sub">信息管理与信息系统 · 2027届</div>
+        <div class="tagline">正在寻找 · 数据分析实习生岗位</div>
+    </div>
+
+    <!-- 关于我 -->
+    <div class="card">
+        <h2>📌 关于我</h2>
+        <p style="margin-top: 8px; font-size: 15px; color: #333;">
+            即知即行，做事靠谱。信管专业背景，兼具技术实现与业务理解能力。<br>
+            擅长用数据发现问题、用分析驱动决策。
+        </p>
+        <div style="margin-top: 14px;">
+            <div class="skills">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Excel</span>
+                <span>PowerBI</span>
+                <span>AI工具</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 项目 -->
+    <div class="card">
+        <h2>📁 项目作品</h2>
+        <div class="project-grid">
+
+            <div class="project-item">
+                <h3>📊 电商品类结构优化研究</h3>
+                <div class="meta">Python · Pandas · 帕累托分析</div>
+                <div class="desc">基于 Olist 平台 11 万+ 真实订单数据，通过帕累托分析完成品类 ABC 分类，发现前 5 品类仅占 40.37%，长尾品类占 36%+，提出品类聚焦、长尾淘汰、交叉推荐三项策略。</div>
+                <div class="tags"><span>数据分析</span><span>策略输出</span></div>
+                <a href="#" class="btn-link">查看详情 →</a>
+            </div>
+
+            <div class="project-item">
+                <h3>🎯 赛博锦鲤 · 抽签小程序</h3>
+                <div class="meta">微信小程序 · 云开发 · 数据埋点</div>
+                <div class="desc">独立完成需求分析 → PRD → UI 设计 → MVP 开发测试全流程。设计云数据库埋点采集用户行为数据，通过活跃时段分析提出产品迭代建议。</div>
+                <div class="tags"><span>产品设计</span><span>数据复盘</span></div>
+                <a href="#" class="btn-link">查看详情 →</a>
+            </div>
+
+            <div class="project-item">
+                <h3>📍 小红书 POI 数据采集与 Top10 推荐</h3>
+                <div class="meta">Python · 爬虫 · 评分模型</div>
+                <div class="desc">基于 GitHub 开源爬虫获取小红书 POI 数据，构建加权评分体系（评分 30% + 收藏 40% + 热度 30%），输出南京女性友好酒吧 Top10 推荐榜单。</div>
+                <div class="tags"><span>数据采集</span><span>评分模型</span></div>
+                <a href="#" class="btn-link">查看详情 →</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 社交与联系方式 -->
+    <div class="card">
+        <h2>📬 保持连接</h2>
+        <div class="social-links" style="margin-top: 10px;">
+            <a href="mailto:2075046994@qq.com">📧 2075046994@qq.com</a>
+            <a href="#">📱 15051721937</a>
+            <a href="#" target="_blank">📕 小红书 · 个人成长笔记</a>
+            <a href="#" target="_blank">💻 GitHub</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        即知即行 · 2026
+    </div>
+
+</div>
+</body>
+</html>
